@@ -1,0 +1,118 @@
+
+:root {
+    --primary-color: #00071a;
+    --secondary-color: #001228;
+    --tertiary-color: #430000;
+    --quaternary-color: #000b3c;
+    --accent-color: #efff08;
+
+    --navbar-link-spacing: 100px;
+    --navbar-height: 50px;
+    --navbar-color: #5069FF;
+
+    --hero-bg: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 75%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+
+}
+
+html {
+    background-color: var(--secondary-color);
+}
+
+
+
+/* #######  Navigation bar  ####### */
+header {
+    overflow: visible;
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    gap: var(--navbar-link-spacing);
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+.navbar-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+
+}
+.navbar-logo img {
+    width: 40px;
+}
+.navbar ul {
+    display: flex;
+    gap: var(--navbar-link-spacing);
+    width: 100%;
+
+}
+.navbar li {
+    display: inline-block;
+}
+
+/* #######  Hero  ####### */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: calc(100dvh - var(--navbar-height));
+    justify-content: center;
+    background: var(--hero-bg);
+}
+
+.hero-content {
+    padding-left: 200px;
+    color:azure;
+}
+.hero-content h1 {
+    font-size: 100px;
+}
+.hero-content p {
+    font-size: 30px;
+}
+
+
+/* #######  Projects  ####### */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--quaternary-color);
+    color: var(--accent-color);
+}
+
+.project-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+
+
+/* #######  Footer  ####### */
+.main-footer {
+    display: flex;
+    padding: 100px;
+    background-color: var(--tertiary-color);
+    color: var(--accent-color);
+}
+
+#button-test {
+    padding: 10px;
+}
