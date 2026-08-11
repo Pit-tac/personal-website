@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="fall leav.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="assets/fall-leaf.png">
 
         <meta charset="UTF-8">
-        <meta name="keywords" content="Portfolio, Project, Showcase, Qualified, Experienced, Hans">
-        <meta name="description" content="Hans Gao's Porftolio">
+        <meta name="keywords" content="Portfolio, Projects, Hans Gao">
+        <meta name="description" content="Hans Gao's Portfolio — software developer and student.">
         <meta name="author" content="Hans Gao">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        
-        <title>Hans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Hans Gao | Portfolio</title>
     </head>
 
     <body>
-        <!-- Navigation Bar -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- Navigation -->
         <header>
-            <nav class="navbar">
-                <div class="navbar-logo">
-                    <img src="/fall leav.png">
-                </div>
-                <ul>
-                    <li>Link1</li>
-                    <li>Link2</li>
-                    <li>Link3</li>
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="#main-content" class="navbar-logo" aria-label="Hans Gao — back to top">
+                    <img src="assets/fall-leaf.png" alt="" aria-hidden="true" width="40" height="40">
+                </a>
+                <ul class="nav-links" role="list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
+        <main id="main-content">
+
             <!-- Hero -->
-            <section class="hero">
+            <section class="hero" aria-labelledby="hero-heading">
                 <div class="hero-content">
-                    <h1>Hans Gao</h2>
-                    <p>Give me a job please I want money</p>
-                    <div>
-                        <a>Resume</a>
-                        <a>Email</a>
-                        <a>LinkedIn</a>
-                        <a>Github</a>
-                    </div>
+                    <h1 id="hero-heading">Hans Gao</h1>
+                    <!-- TODO: Replace with your real tagline, e.g. "CS Student at XYZ · interested in systems and web" -->
+                    <p class="hero-tagline">CS @ SJSU - AI Enthusiast</p>
+                    <nav class="hero-links" aria-label="Contact and social links">
+                        <a href="mailto:hansgggao@gmail.com" class="btn btn-primary">Email Me</a>
+                        <a href="https://www.linkedin.com/in/gao-hans/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline"
+                           aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+                        <a href="https://github.com/Pit-tac"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline"
+                           aria-label="GitHub profile (opens in new tab)">GitHub</a>
+                        <!-- TODO: Add once you have a hosted PDF:
+                        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-outline" aria-label="Resume PDF (opens in new tab)">Resume</a>
+                        -->
+                    </nav>
                 </div>
             </section>
 
-            <!-- Silly button -->
-            <button id="button-test" onclick="testFunc()">Click me!</button>
-
-            <!-- Personal Projects babyyy /-->
-            <section class="project">
-                <h1>Personal Projects</h1>
-                <div class="project-list">
-                    <p>None because I'm lazy :&lpar;</p>
-                    <p>I made semi-working code for a game</p>
+            <!-- About -->
+            <section id="about" class="about" aria-labelledby="about-heading">
+                <div class="section-inner">
+                    <h2 id="about-heading" class="section-title">About</h2>
+                    <!-- TODO: 2-3 sentences — year, major, what you're into, one memorable non-CS fact -->
+                    <p class="about-text">
+                        I'm a CS student who loves to build upwards from first-principles. <br>
+                        [placeholder].
+                    </p>
                 </div>
             </section>
 
+            <!-- Projects -->
+            <section id="projects" class="projects" aria-labelledby="projects-heading">
+                <div class="section-inner">
+                    <h2 id="projects-heading" class="section-title">Projects</h2>
+                    <ul class="project-grid" role="list">
+
+                        <!-- TODO: Replace with your real project details -->
+                        <li>
+                            <article class="project-card">
+                                <h3>Game Project</h3>
+                                <p>[placeholder]</p>
+                                <ul class="tech-tags" aria-label="Technologies used" role="list">
+                                    <li>JavaScript</li>
+                                    <li>HTML Canvas</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <div class="card-links">
+                                    <!-- TODO: Point to your actual repo -->
+                                    <a href="https://github.com/Pit-tac"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="Game Project on GitHub (opens in new tab)">
+                                        View on GitHub &rarr;
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
 
         </main>
-        
-        <!-- Footer -->
-        <footer class="main-footer">
-            <p>&copy;My Website</p>
+
+        <!-- Footer / Contact -->
+        <footer id="contact" class="main-footer" aria-label="Site footer">
+            <p>Hans Gao &mdash;
+                <a href="mailto:hansgggao@gmail.com">hansgggao@gmail.com</a>
+            </p>
+            <p><small>&copy; 2026</small></p>
         </footer>
 
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
