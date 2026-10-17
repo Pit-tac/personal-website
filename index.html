@@ -42,19 +42,19 @@
                     <!-- TODO: Replace with your real tagline, e.g. "CS Student at XYZ · interested in systems and web" -->
                     <p class="hero-tagline">CS @ SJSU</p>
                     <nav class="hero-links" aria-label="Contact and social links">
-                        <a href="mailto:hansgggao@gmail.com" class="btn btn-primary">Email Me</a>
+                        <a href="mailto:hansgggao@gmail.com" class="btn btn-primary"><img src="assets/email-icon.png" alt="" aria-hidden="true" class="btn-icon">Email Me</a>
                         <a href="https://www.linkedin.com/in/gao-hans/"
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="btn btn-outline"
-                           aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+                           class="btn btn-outline ext-link"
+                           aria-label="LinkedIn profile (opens in new tab)"><img src="assets/linkedin-icon.png" alt="" aria-hidden="true" class="btn-icon">LinkedIn</a>
                         <a href="https://github.com/Pit-tac"
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="btn btn-outline"
-                           aria-label="GitHub profile (opens in new tab)">GitHub</a>
+                           class="btn btn-outline ext-link"
+                           aria-label="GitHub profile (opens in new tab)"><img src="assets/github-icon.svg" alt="" aria-hidden="true" class="btn-icon">GitHub</a>
                         <a href="assets\Hans_Gao_Resume.pdf" target="_blank" rel="noopener noreferrer"
-                           class="btn btn-outline" aria-label="Resume PDF (opens in new tab)">Resume</a>
+                           class="btn btn-outline ext-link" aria-label="Resume PDF (opens in new tab)"><img src="assets/pdf-icon.png" alt="" aria-hidden="true" class="btn-icon">Resume</a>
                     </nav>
                 </div>
             </section>
@@ -65,7 +65,7 @@
                     <h2 id="about-heading" class="section-title">About</h2>
                     <p class="about-text">
                         I'm a CS student who loves to build upwards from first-principles. <br>
-                        I love to play chess, tennis, and ice skate. I'm self-competitive and always striving to improve. <br>
+                        I love to play chess, ice skate, and do archery. I'm very self-competitive and always striving to improve. <br>
                         My current focus is to break into EdTech. <br>
                     </p>
                 </div>
@@ -77,25 +77,60 @@
                     <h2 id="projects-heading" class="section-title">Projects</h2>
                     <ul class="project-grid" role="list">
 
-                        <!-- TODO: Replace with your real project details -->
                         <li>
                             <article class="project-card">
-                                <h3>Game Project</h3>
-                                <p>[placeholder]</p>
+                                <h3>Personal Website</h3>
+                                <p>This portfolio site, built to showcase my projects. Uses JavaScript for interactive scroll elements and animations.</p>
                                 <ul class="tech-tags" aria-label="Technologies used" role="list">
-                                    <li>JavaScript</li>
-                                    <li>HTML Canvas</li>
+                                    <li>HTML</li>
                                     <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Cursor</li>
                                 </ul>
                                 <div class="card-links">
-                                    <!-- TODO: Point to your actual repo -->
-                                    <a href="https://github.com/Pit-tac"
+                                    <a href="https://github.com/Pit-tac/personal-website"
                                        target="_blank"
-                                       rel="noopener noreferrer"
-                                       aria-label="Game Project on GitHub (opens in new tab)">
-                                        View on GitHub &rarr;
+                                       rel="noopener noreferrer" class="ext-link"
+                                       aria-label="Personal Website on GitHub (opens in new tab)">
+                                        View on GitHub
                                     </a>
                                 </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="project-card">
+                                <h3>Durak Game AI Agent</h3>
+                                <p>A Godot implementation of Durak, the Russian trick-taking card game, with a custom Monte Carlo Tree Search and expectimax AI opponent.</p>
+                                <ul class="tech-tags" aria-label="Technologies used" role="list">
+                                    <li>Godot</li>
+                                    <li>GDScript</li>
+                                    <li>MCTS</li>
+                                    <li>Expectimax</li>
+                                    <li>Claude Code</li>
+                                </ul>
+                                <div class="card-links">
+                                    <a href="https://github.com/Pit-tac/Durak"
+                                       target="_blank"
+                                       rel="noopener noreferrer" class="ext-link"
+                                       aria-label="Durak on GitHub (opens in new tab)">
+                                        View on GitHub
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="project-card">
+                                <h3>Rocket Flight Computer</h3>
+                                <p>Led the electronics team at De Anza Aerospace Club in designing and programming a custom flight computer for a two-stage rocket. Researched a custom Kalman filter to optimize second-stage ignition timing and parachute deployment.</p>
+                                <ul class="tech-tags" aria-label="Technologies used" role="list">
+                                    <li>C++</li>
+                                    <li>Arduino</li>
+                                    <li>Kalman Filter</li>
+                                    <li>OpenRocket</li>
+                                    <li>OnShape</li>
+                                </ul>
                             </article>
                         </li>
 
@@ -110,6 +145,15 @@
             <p>Hans Gao &mdash;
                 <a href="mailto:hansgggao@gmail.com">hansgggao@gmail.com</a>
             </p>
+            <ul class="footer-links" role="list" aria-label="Contact and social links">
+                <li><a href="mailto:hansgggao@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/gao-hans/" target="_blank" rel="noopener noreferrer" class="ext-link"
+                       aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a></li>
+                <li><a href="https://github.com/Pit-tac" target="_blank" rel="noopener noreferrer" class="ext-link"
+                       aria-label="GitHub profile (opens in new tab)">GitHub</a></li>
+                <li><a href="assets/Hans_Gao_Resume.pdf" target="_blank" rel="noopener noreferrer" class="ext-link"
+                       aria-label="Resume PDF (opens in new tab)">Resume</a></li>
+            </ul>
             <p><small>&copy; 2026</small></p>
         </footer>
 

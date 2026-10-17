@@ -148,13 +148,37 @@ header {
 .hero-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
+}
+
+
+/* ======= External link arrow ======= */
+/* Arrow inherits the link's text color via mask */
+.ext-link::after {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.35em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+    vertical-align: -0.05em;
+}
+
+/* Buttons already space children with flex gap */
+.btn.ext-link::after {
+    margin-left: 0;
 }
 
 
 /* ======= Buttons ======= */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.6rem 1.4rem;
     font-family: var(--font-heading);
     font-size: 0.9rem;
@@ -179,6 +203,28 @@ header {
 .btn-primary:hover {
     background-color: transparent;
     color: var(--color-accent);
+}
+
+/* Icons are black PNGs: white by default, black on the yellow primary button */
+.btn-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter var(--transition);
+}
+
+.btn-primary .btn-icon {
+    filter: brightness(0);
+}
+
+.btn-primary:hover .btn-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Turn icons yellow (#efff08) on hover */
+.btn-outline:hover .btn-icon {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(90%) saturate(1500%) hue-rotate(10deg);
 }
 
 .btn-outline {
@@ -333,6 +379,14 @@ header {
     opacity: 0.75;
 }
 
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+
 
 /* ======= Scroll Animations ======= */
 .reveal {
@@ -368,6 +422,6 @@ header {
     }
     .hero-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 }
