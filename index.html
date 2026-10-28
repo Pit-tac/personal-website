@@ -75,7 +75,24 @@
             <section id="projects" class="projects" aria-labelledby="projects-heading">
                 <div class="section-inner">
                     <h2 id="projects-heading" class="section-title">Projects</h2>
-                    <ul class="project-grid" role="list">
+                    <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Projects">
+                    <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous project">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <ul class="project-track" role="list" tabindex="0" aria-label="Projects. Use the left and right arrow keys to browse">
+
+                        <li>
+                            <article class="project-card">
+                                <h3>Full-Stack Web Application</h3>
+                                <p>A server-side rendered web app built from scratch with no frameworks: front-controller routing, a bcrypt login system with route-level authorization, and cookie-based sessions using cryptographically random, hashed tokens. In progress: global error handling and a JSON API.</p>
+                                <ul class="tech-tags" aria-label="Technologies used" role="list">
+                                    <li>PHP</li>
+                                    <li>MySQL (PDO)</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML/CSS</li>
+                                </ul>
+                            </article>
+                        </li>
 
                         <li>
                             <article class="project-card">
@@ -135,6 +152,11 @@
                         </li>
 
                     </ul>
+                    <button type="button" class="carousel-arrow carousel-next" aria-label="Next project">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                    <div class="carousel-dots" role="group" aria-label="Choose project"></div>
+                    </div>
                 </div>
             </section>
 
