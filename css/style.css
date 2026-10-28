@@ -2,6 +2,7 @@
 :root {
     --color-bg:        #00071a;
     --color-bg-alt:    #070931;
+    --color-card:      #111339;
     --color-bg-about:  #173152;
     --color-footer:    #160019;
     --color-accent:    #efff08;
@@ -316,10 +317,11 @@ header {
     width: var(--card-w);
     display: flex;
     transform: translateX(calc(var(--offset) * var(--side-shift))) scale(var(--side-scale));
-    opacity: 0.45;
+    /* Dim side cards with brightness rather than opacity so they stay opaque */
+    filter: brightness(0.5);
     z-index: 1;
     cursor: pointer;
-    transition: transform 450ms ease, opacity 450ms ease, visibility 450ms;
+    transition: transform 450ms ease, filter 450ms ease, opacity 450ms ease, visibility 450ms;
 }
 
 .project-track > li > .project-card {
@@ -328,7 +330,7 @@ header {
 
 .project-track > li.is-active {
     transform: none;
-    opacity: 1;
+    filter: none;
     z-index: 2;
     cursor: auto;
 }
@@ -444,7 +446,8 @@ header {
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.04);
+    /* Solid equivalent of 4% white over the section background, so overlapping cards don't show through */
+    background-color: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
     padding: 1.75rem;
